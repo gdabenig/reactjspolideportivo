@@ -1,0 +1,7 @@
+.card{
+    width: fit-content;
+    background-color: rgb(0, 255, 128);
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
