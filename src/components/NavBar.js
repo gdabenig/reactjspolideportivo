@@ -22,7 +22,7 @@ const NavBar = () => {
     return(
     
         <div className="nav">
-           <h1 className="nav-logo">POLIDEPORTIVO DON BOSCO</h1>
+           <h1 className="nav-logo">POLIDEPORTIVO DON BOSCO </h1>
           <div>
             {navItems.map((item) => (
             <a href="/" className="nav-item" key={item.id}>{item.label}</a>
