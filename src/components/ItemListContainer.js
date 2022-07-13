@@ -7,11 +7,11 @@ import ItemList from '../components/ItemList';
 const ItemListContainer = ({greeting}) =>{
     const [productosLista, setproductosLista] = useState([])
     const productos = [
-        {id: '01', name: 'Cancha de 7', precio: '5000', stock: '4'},
-        {id: '02', name: 'Cancha de 9', precio: '4000', stock: '3'},
-        {id: '03', name: 'Cancha de 5', precio: '3000', stock: '2'},
-        {id: '04', name: 'Salones', precio: '9500', stock: '2'}
-    ]
+        {id: '01', name: 'Cancha de 7', precio: '5000', stock: '4' , image:'../public/imagenes/cancha 7.jpg'},
+        {id: '02', name: 'Cancha de 9', precio: '4000', stock: '3' , image:'../public/imagenes/cancha 9.jpg'},    
+        {id: '03', name: 'Cancha de 5', precio: '3000', stock: '2' , image:'../public/imagenes/cinco.jpeg'},
+        {id: '04', name: 'Salones',     precio: '9500', stock: '2' , image:'../public/imagenes/salones2.jpeg'}
+                    ]
 
     const getData = new Promise ((resolve, reject) =>{
 
@@ -32,7 +32,7 @@ const ItemListContainer = ({greeting}) =>{
     console.log (productosLista)
     
     const onAdd = (quantity) =>{
-        console.log(`Compraste ${quantity} unidades`);
+        alert(`Compraste ${quantity} unidades`);
     }
 
     return(
