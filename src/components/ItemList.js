@@ -1,15 +1,28 @@
-import React from "react";
-import Item from '../components/Item';
-const ItemList = ({productosLista}) => {
-    
-    return(
-       <div>
-        <h3>Lista de Servicios en Alquiler</h3>
-        {productosLista.map((producto)=><p key={producto.id}>{producto.name}</p>)}
+import React from 'react';
+import Item from '../components/Item/Item';
 
-       </div>       
-    )
+const ItemList = ({ items }) => {
+    return (
+        <>
+            <div
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    maxWidth: '80%',
+                    margin: '0 auto',
+                }}
+            >
+                {items.map((item) => (
+                    <Item key={item.id} item={item} />
+                ))}
+            </div>
+        </>
+    );
+};
 
-}
+export default ItemList;
 
-export default ItemList
+
+
+
+

@@ -1,9 +1,0 @@
-function Menu () { // componente
-    return(
-        <div style={{color: 'white'}}>
-            Menu
-        </div>
-    )
-}
-
-export default Menu

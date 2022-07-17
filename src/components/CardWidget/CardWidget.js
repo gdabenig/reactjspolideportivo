@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/CartWidget style/styles.css";
+import "../../components/CardWidget/styles.css";
 
 
 
