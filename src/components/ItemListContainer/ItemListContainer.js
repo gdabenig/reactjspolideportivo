@@ -8,16 +8,14 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
 
     const { categoryId } = useParams();
-    //console.log(parametro.categoryId);
-   
-    useEffect(() => {
+     useEffect(() => {
         setLoading(true);
-
+       
         const URL = categoryId 
             ? `https://fakestoreapi.com/products/category/${categoryId}`
             : 'https://fakestoreapi.com/products';
-
-
+            // alert (URL);
+                     
         fetch(URL)
             .then((res) => res.json())
             .then((json) => setProducts(json))

@@ -1,7 +1,7 @@
 export const productos = [
   {
       id: 1,
-      title: 'Samsung galaxy s10',
+      title: 'Samsung galaxy S10',
       price: 65000,
       stock: 4,
 
@@ -12,7 +12,7 @@ export const productos = [
   },
   {
       id: 2,
-      title: 'Samsung galaxy s20',
+      title: 'Samsung galaxy S20',
       price: 128000,
       stock: 10,
 

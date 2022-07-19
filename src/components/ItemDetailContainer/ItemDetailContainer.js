@@ -8,9 +8,9 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
 
     const { id } = useParams();
-
-    useEffect(() => {
+     useEffect(() => {
         setLoading(true);
+       
         const URL = `https://fakestoreapi.com/products/${id}`;
         fetch(URL)
             .then((res) => res.json())
