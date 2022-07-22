@@ -9,7 +9,6 @@ const ItemDetail = ({ product }) => {
 
     const [GoToCart, setGoToCart] = useState(false);
     const {addProduct} = useCartContext();
-
     const onAdd = (data, quantity) => {
         setGoToCart(true);
         addProduct(data,quantity);
