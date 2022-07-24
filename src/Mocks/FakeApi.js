@@ -66,6 +66,39 @@ export const productos = [
       description:
           '5G habilitado: el OnePlus Nord N20 es el teléfono 5G de nivel básico perfecto, con especificaciones premium y un precio asequible. *5G compatible con T-mobile, Google Fi, Mint Mobile, Metro by TMO, Simple Mobile. 5G disponible en áreas seleccionadas.',
   },
+  {
+    id: 7,
+    title: 'Samsung Galaxy Z3 Flit3 5G',
+    price: 314000,
+    stock: 3,
+
+    image: 'https://m.media-amazon.com/images/I/416fm1ITV6L._AC_SX425_.jpg',
+    category: 'samsung',
+    description:
+        'Sin dudas el Samsung Galaxy Z Flip3 es ideal para quienes buscan innovación, tecnología de punta y durabilidad en un mismo dispositivo. En su nueva versión además de ajustarse a cualquier bolsillo, está disponible en una gama de colores brillantes para que elijas el ideal para vos .',
+},
+{
+    id: 8,
+    title: 'Samsung Galaxy S21 FE 5G',
+    price: 167000,
+    stock: 6,
+
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZFj2NbQwxxyLWwiaL_gl-TaAb2a19K71nejexSyW6tTtfSvqHjevf_a4MUOR8GGW13ek&usqp=CAU',
+    category: 'samsung',
+    description:
+        ' El Galaxy S21 Fan Edition 128GB tiene todo lo que te gusta en 6,4 pulgadas, un tamaño diseñado para conectarte con amigos, explorar nuevas pasiones, realizar una transmisión en vivo y disfrutar durante horas de tus programas favoritos.',
+},
+{
+    id: 9,
+    title: 'Motorola Edge 20 Pro',
+    price: 97000,
+    stock: 9,
+
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN-T_h0Wyg4agZwuYGHUAdI88S5C_fQ09N9g&usqp=CAU',
+    category: 'motorola',
+    description:
+        'Su procesador Qualcomm Snapdragon de 870, hace del Motorola Edge 20 Pro un smartphone ultra potente, perfecto para realizar múltiples tareas a la vez. Además, incluye la Plataforma Ready For, para que conectes el equipo con la TV o con tu computadora y disfrutes de tus apps favoritas en una pantalla más grande. ',
+},
 ];
 
 export const getProds = (categoryId) => {

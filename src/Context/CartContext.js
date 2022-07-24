@@ -14,9 +14,9 @@ const CartProvider = ({children}) =>{
         setCart(newCart);
     }
 
-    console.log('carrito', cart);
+   console.log('carrito', cart);
 
-   /*con map 
+   /*  con map 
     const addProduct = (item, quantity) =>{
         if (isInCart(item.id)){
             setCart(cart.map(product =>{
@@ -24,9 +24,9 @@ const CartProvider = ({children}) =>{
             }));
         } else{
             setCart([...cart, { ...item, quantity}]);
-        }
-    }
-    console.log('carrito', cart)*/
+        } */
+    // }
+    // console.log('carrito', cart)*
 
     const clearCart = () => setCart([]);
 
