@@ -5,16 +5,18 @@ import { Link } from 'react-router-dom';
 import ItemCount from '../../components/ItemCount/ItemCount';
 import '../ItemCount/styles.css';
 
+
 const ItemDetail = ({ product }) => {
 
     const [GoToCart, setGoToCart] = useState(false);
     const {addProduct} = useCartContext();
-    const onAdd = (data, quantity) => {
+
+    const onAdd = (quantity) => {
         setGoToCart(true);
-        addProduct(data,quantity);
+        addProduct(product,quantity);
     };
 
-    
+
     return (
         <div className="detail">
             <img src={product.image} alt={product.title} width="400" />
