@@ -1,24 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import { getFirestore, doc , getDoc } from 'firebase/firestore';
 import { useParams } from 'react-router-dom';
+import { getProd } from '../../Mocks/FakeApi';
 import ItemDetail from '../ItemDetail/ItemDetail';
-
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
 
     const { id } = useParams();
-
-    useEffect(() => {
+     useEffect(() => {
         setLoading(true);
-        const querydb = getFirestore();
-        const queryDoc = doc(querydb, 'productos', id);
-        getDoc(queryDoc)
-        .then(res => setProduct({id: res.id, ...res.data() }))
-        .then(setLoading(false));
-     }, [id]);
+       
+        const URL = `https://fakestoreapi.com/products/${id}`;
+        fetch(URL)
+            .then((res) => res.json())
+            .then((json) => setProduct(json))
+            .finally(() => {
+                setLoading(false);
+            });
 
-        return (
+        getProd(id)
+            .then((res) => {
+                setProduct(res);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            }); 
+    }, [id]);
+
+  
+    //console.log(product);
+    return (
         <div>
             {loading ? (
                 <h2>Cargando...</h2>
