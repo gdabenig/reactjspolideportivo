@@ -16,7 +16,7 @@ const CartProvider = ({children}) =>{
        };
     }
 
-    console.log('carrito', cart);
+    console.log('carrito compras', cart);
 
    /*con map 
     const addProduct = (item, quantity) =>{
