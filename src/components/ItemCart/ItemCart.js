@@ -4,6 +4,7 @@ import '../../components/ItemCart/styles.css';
 
 const ItemCart = ({ product }) => {
     const { removeProduct } = useCartContext();
+    
     return(
         <div className="ItemCart">
             {/* <img src="product.image" alt="product.title" /> */}
@@ -19,6 +20,7 @@ const ItemCart = ({ product }) => {
                     Eliminar</button>
 
             </div>
+            
         </div>
     )
 }

@@ -16,7 +16,7 @@ const CartProvider = ({children}) =>{
        };
     }
 
-    console.log('carrito default compras', cart);
+    console.log('carrito', cart);
 
    
 

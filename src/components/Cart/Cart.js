@@ -5,7 +5,7 @@ import { useCartContext } from "../../Context/CartContext";
 import ItemCart from '../ItemCart/ItemCart';
 
 const Cart = () => {
-    const { cart, totalPrice } = useCartContext();
+    const { cart, totalPrice,clearCart} = useCartContext();
     const order = {
         buyer: {
             name: 'Guillermo',
@@ -25,8 +25,7 @@ const Cart = () => {
         .then(({id}) => console.log(id))
 
     }
-
-    if(cart.lenght === 0){
+    if(totalPrice() === 0){
         return(
             <>
                 <p>No hay elementos en el carrito</p>
@@ -44,7 +43,14 @@ const Cart = () => {
             <p>
                 Precio Total : $ {totalPrice()}
             </p>
-            <button onClick={handleClick}>EMITIR ORDEN DE COMPRA </button>
+            
+            <button onClick={handleClick}>EMITIR ORDEN DE COMPRA </button> 
+            <p></p>
+           
+            <button onClick={() => clearCart()}>
+               Vaciar Carrito</button>
+       
+
         </>
     );
     
