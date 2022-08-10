@@ -9,9 +9,7 @@ const ItemListContainer = () => {
 
     const { categoryId } = useParams();
          
-     console.log(categoryId);
-   
-    useEffect(() => {
+         useEffect(() => {
         setLoading(true);
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'productos');
@@ -41,6 +39,5 @@ const ItemListContainer = () => {
         </div>
     );
 };
-
 export default ItemListContainer;
 
