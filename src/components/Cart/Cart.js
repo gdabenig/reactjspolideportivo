@@ -8,47 +8,119 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 
-const notifyno = () => toast("Su orden todavia no fue generada.DEBE EMITIR ORDEN.Se le enviara por mail ");                    
-Swal.fire(
-    'Su orden fue generada .Se la enviaremos por mail -Gracias!',
-    'Presione el boton!',
-    'success'
-  )
+const notifyno = () => toast("Su orden todavia no fue generada.DEBE EMITIR ORDEN.Se le enviara por mail ");     
+
+    
+    
+
+    const error1 = () =>             
+    Swal.fire(
+        'Debe completar el nombre.Ingreselo nuevamente!',
+        'Presione el boton!',
+        'error'  );                  
+     
+    const error2 = () =>             
+    Swal.fire(
+        'Debe ingresar el telefono.Ingreselo nuevamente!',
+        'Presione el boton!',
+        'error'   );
+
+     const error3 = () =>             
+        Swal.fire(
+            'Debe ingresar el mail.Ingreselo nuevamente!',
+            'Presione el boton!',
+            'error'  )
+
+     const error4 = () =>             
+            Swal.fire(
+                'Los mail no coinciden :Ingreselos nuevamente!',
+                'Presione el boton!',
+                'error'    );
+     const error5 = () =>             
+                Swal.fire(
+                    'Debe validar el formulario. Ingrese los datos!',
+                    'Presione el boton!',
+                    'error'    );
+
+  
 const Cart = () => {
-    const { cart, totalPrice,clearCart} = useCartContext();
+    const { cart, totalPrice,clearCart,totalProducts} = useCartContext();
     const order = {
-        buyer: {
+           
+            buyer: {
             name: 'Guillermo',
             email: 'gdabenig@gmail.com',
-            phone: '1139058270',
-            address: 'asdd'
+            phone: '1139058270'
+            
+            
 
         },
         items: cart.map(product =>({id: product.id, title: product.title, price: product.price, quanity: product.quantity})),
         total: totalPrice(),
+        
     }
     
+const exito = () =>             
+    Swal.fire(
+    'Su orden fue generada -  .Se la enviaremos por mail -Gracias! ', 
+    'Presione el boton!',
+    'success' )
     
-    
+
+const exito2 = () => 
+
+    Swal.fire({
+        title: 'Su orden es :',
+        text: JSON.stringify(order) ,
+        icon: 'success'
+             })
+
     const emitirorden = () =>{
+               
         order.buyer.name = document.getElementById("buyer.name").value  ; 
         order.buyer.phone = document.getElementById("buyer.phone").value  ; 
         order.buyer.email = document.getElementById("buyer.email").value  ; 
-        Swal.fire('Su orden fue generada .Se la enviaremos por mail -Gracias!',
-        'Presione el boton!',
-        'success' );
+        if   (order.buyer.name  !==  ''   && order.buyer.phone  !==  '' && order.buyer.email  !==  '' )
+                    {
+            
+        exito();
+        
         const db = getFirestore ();
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order)
-        .then(({id}) => console.log(id))
-         clearCart();
-    
-         
-         
-    
+        .then(({id}) => exito2() )
+        
+             
+        clearCart();
+        
+     }
+        else
+            {
+                error5();
+            }
          
     }
-    
+    const validardatos = () =>{    
+        order.buyer.name = document.getElementById("buyer.name").value  ; 
+        order.buyer.phone = document.getElementById("buyer.phone").value  ; 
+        order.buyer.email = document.getElementById("buyer.email").value  ; 
+            
+        if(order.buyer.email !== document.getElementById("buyer.remail").value )
+                  {    error4( );
+
+                  }
+        if(order.buyer.name === '' )
+                  {    error1( );
+                  }      
+        if(order.buyer.phone === '')
+                  {    error2();
+                  }     
+        if(order.buyer.email === '')
+                  {    error3();
+                   }      
+                         
+    }
+
     if(totalPrice() === 0){
        
         return(
@@ -65,8 +137,7 @@ const Cart = () => {
                 
         );
                        };
-
-
+    
     return(
         <>
           <div className="col mt-5">                
@@ -104,19 +175,21 @@ const Cart = () => {
                     <div className="form-group">
                         <label htmlFor="">Validar Email</label>
                         <input 
+                            id= "buyer.remail" 
                             type="text"
                             className="form-control" 
                             name="validarEmail" 
                             placeholder="Repita Email" 
                         />
                     </div>
+                    <button type="button" className="btn btn-primary mt-2" onClick={validardatos}>Validar Formulario</button>
                 </form>
             </div>
             {
                 cart.map(product => <ItemCart key={product.id} product={product} />)
             }
             <p>
-                Precio Total : $ {totalPrice()}
+                Precio Total : $ {totalPrice()} ----- Cantidad de productos ({totalProducts()})
             </p>
             
                              

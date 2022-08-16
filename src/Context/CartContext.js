@@ -8,17 +8,15 @@ const CartProvider = ({children}) =>{
 
     const [cart, setCart] = useState([]);
     
-    const addProduct = (item, quantity) =>{
-       if(isInCart(item.id)){
-            console.log('ya esta en el carrito, sumo cantidad');
+    const addProduct = (item, quantity) => {
+       if(isInCart(item.id)) {
+           
        } else{
             setCart([...cart, {... item, quantity}]);
        };
     }
-
-    console.log('carrito', cart);
-
-   
+      
+       
 
     const totalPrice = () =>{
         return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);

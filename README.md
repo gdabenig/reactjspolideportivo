@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# React js
+## _Es una bibliteca para desarrollo web_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-## Available Scripts
+[![Build Status])](https://nodejs.org/en)
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- En primer lugar, React ejecuta un algoritmo de “diffing”
+- que identifica lo que ha cambiado.
+- El segundo paso es la reconciliación, donde se actualiza el DOM con los resultados de diff.
+- React se encarga de todo esto, nosotros solo aprenderemos a ayudarlo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Tech
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Js uses a number of open source projects to work properly:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Bootstrap] - great UI boilerplate for modern web apps
+- [node.js] - evented I/O for the backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React js requires [Node.js](https://nodejs.org/) v10+ to run.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install [Node.js]  the dependencies and devDependencies and start the server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+For production environments...Install cli
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm install -g create-react-app (version 18.2.0)
+create-react-app my-app (poli)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Plugins
 
-### Analyzing the Bundle Size
+React js is currently extended with the following plugins.
+Instructions on how to use them in your own application are linked below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Plugin | README |
+| ------ | ------ |
+| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| GitHub | [plugins/github/README.md][PlGh] |
+| Google Drive | [plugins/googledrive/README.md][PlGd] |
+| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Medium | [plugins/medium/README.md][PlMe] |
+| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
 
-### Making a Progressive Web App
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Want to contribute? Great!
 
-### Advanced Configuration
+React js uses Gulp + Webpack for fast developing.
+Make a change in your file and instantaneously see your updates!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open your favorite Terminal and run these commands.
 
-### Deployment
+Desde el shell:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+npm install react-bootstrap bootstrap  (version 2.4.0)
 
-### `npm run build` fails to minify
+npm install react-router-dom (version 6.3.0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm install --save react-toastify (version 9.0.8)
+
+npm install sweetalert2-react (version 11.4.26 )
+
+npm install web-vitals (version 2.1.4)
+
+firebase               (version 9.9.1 )  (apiKey: "AIzaSyA9lAF3Q8wgOVodvHLJavaaRQHoOWk1--0",
+                                          authDomain: "don-bosco-af3c3.firebaseapp.com",
+                                          projectId: "don-bosco-af3c3",)
+
+
+```
+
+
+
+#### Building for source
+
+For production release:
+
+```sh
+npm run build
+```
+
+
+
+
+
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [boostrap]: <:https://react-bootstrap.github.io>
+   [sweetalert2]: <https://sweetalert2.github.io/#download>
+   [tostify]: <https://www.npmjs.com/package/react-toastify>
+   [firebase]: < https://console.firebase.google.com/u/0/project/don-bosco-af3c3/firestore/data/~2Fproductos~2F22UKUVQ2h2tIQd4yM6ga?hl=es-419>
+   [web-vitals]: < http://daringfireball.net/projects/markdown/>
+   [react-scripts]: <https://www.npmjs.com/package/react-scriptshttps>
+   [react-dom]: <https://es.reactjs.org/docs/react-dom>
+   [node.js]: <http://nodejs.org>
+   [react-router-dom]: <https://www.npmjs.com/package/react-router-dom>
+   
+
+   

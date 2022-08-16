@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import "../../components/CardWidget/styles.css";
 
 
-
 const CartWidget = () => {
     return(
         <>
+        
         <Link to='/cart' >
             <button button className="cart-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="cart" viewBox="0 0 16 16">
