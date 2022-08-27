@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 
+
 const notifyno = () => toast("Su orden todavia no fue generada.DEBE EMITIR ORDEN.Se le enviara por mail ");     
 
     
@@ -50,7 +51,8 @@ const Cart = () => {
             buyer: {
             name: 'Guillermo',
             email: 'gdabenig@gmail.com',
-            phone: '1139058270'
+            phone: '1139058270',
+            ahora: ''
             
             
 
@@ -84,7 +86,8 @@ const exito2 = () =>
                     {
             
         exito();
-        
+              
+        order.buyer.ahora = Date();
         const db = getFirestore ();
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order)
