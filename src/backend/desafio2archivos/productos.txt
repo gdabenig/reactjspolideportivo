@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "producto 1",
+    "precio": 100,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 1
+  },
+  {
+    "nombre": "producto 2",
+    "precio": 200,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 2
+  },
+  {
+    "nombre": "producto 3",
+    "precio": 300,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 3
+  },
+  {
+    "nombre": "producto 4",
+    "precio": 400,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 4
+  },
+  {
+    "nombre": "producto 5",
+    "precio": 500,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 5
+  },
+  {
+    "nombre": "producto 6",
+    "precio": 600,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 6
+  },
+  {
+    "nombre": "producto 7",
+    "precio": 700,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 7
+  },
+  {
+    "nombre": "producto 8",
+    "precio": 800,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 8
+  },
+  {
+    "nombre": "producto 9",
+    "precio": 900,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 9
+  },
+  {
+    "nombre": "producto 10",
+    "precio": 1000,
+    "thumbnail": "https://images.fravega.com/f300/fa53805370e7eed1fc1eb974d668d857.jpg.webp",
+    "id": 10
+  }
+]
