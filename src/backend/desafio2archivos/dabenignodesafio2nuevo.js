@@ -183,10 +183,10 @@ class Container {
 }
 // const deletaAll = new Container("./productos.txt").deleteAll()
 
-const addProducts = new Container("./productos.txt").save("Iphone")
+const addProducts = new Container("./productos.txt").save("Motorola")
 
 // const findID = new Container("./productos.txt").getById(23)
 
 // const getAll = new Container("./productos.txt").getAll()
 
-// const deleteById = new Container("./productos.txt").deleteById(5)
+//  const deleteById = new Container("./productos.txt").deleteById(5)
